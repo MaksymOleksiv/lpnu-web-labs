@@ -1,0 +1,42 @@
+.footer {
+  position: relative;
+  background: var(--gradient-footer);
+  padding: 40px 0;
+  margin-top: 0;
+
+  .footer_rect {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+  }
+
+  .footer__logo {
+    cursor: pointer;
+  }
+
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer__list {
+      list-style: none;
+      display: flex;
+      gap: 250px;
+      margin: 0;
+      padding: 0;
+
+      .footer__item {
+        
+        .footer__link {
+          text-decoration: none;
+          font-family: var(--text-font);
+          color: #fff;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
