@@ -3,13 +3,18 @@
   --title-text-color: #000000;
   --text-color: #7d7987;
   --text-font: "Roboto";
-  --feedback-bg-color: #F3F8FE;
-  --gradient-feedback: linear-gradient(to top right, #5A98F2, #67C3F3);
-  --gradient-footer: linear-gradient(180deg,rgba(103, 195, 243, 1), rgba(90, 152, 242, 1));
+  --feedback-bg-color: #f3f8fe;
+  --gradient-feedback: linear-gradient(to top right, #5a98f2, #67c3f3);
+  --gradient-footer: linear-gradient(
+    180deg,
+    rgba(103, 195, 243, 1),
+    rgba(90, 152, 242, 1)
+  );
 }
 
 body {
   background-color: #fdfdfd;
+  overflow-x: hidden;
 }
 
 .conteiner {

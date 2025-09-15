@@ -9,15 +9,16 @@
   <body>
     <header class="header conteiner">
       <nav class="header__nav nav">
-        <ul class="nav__list">
+        <button class="nav__burger" id="navBurger" aria-label="Open navigation" aria-expanded="false" aria-controls="navList">
+          <span class="nav__burger-bar"></span>
+          <span class="nav__burger-bar"></span>
+          <span class="nav__burger-bar"></span>
+        </button>
+        <ul class="nav__list" id="navList">
           <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Find a doctor</a>
-          </li>
+          <li class="nav__item"><a class="nav__link" href="#">Find a doctor</a></li>
           <li class="nav__item"><a class="nav__link" href="#">Apps</a></li>
-          <li class="nav__item">
-            <a class="nav__link" href="#">Testimonials</a>
-          </li>
+          <li class="nav__item"><a class="nav__link" href="#">Testimonials</a></li>
           <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
         </ul>
         <img class="nav__logo" src="assets/logo.svg" alt="Logo" />
@@ -179,5 +180,14 @@
         </ul>
       </div>
     </footer>
+</main>
+<script>
+  const burger = document.getElementById('navBurger');
+  const navList = document.getElementById('navList');
+  burger.addEventListener('click', function() {
+    const open = navList.classList.toggle('nav__list--open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
   </body>
 </html>
