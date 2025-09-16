@@ -1,89 +1,88 @@
 .header {
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      position: relative;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+
+    .nav__list {
+      display: none;
+      flex-direction: column;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 60px;
+      left: 0;
       width: 100%;
+      box-sizing: border-box;
+      background: #fff;
+      z-index: 100;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
 
-      .nav__list {
-        display: none;
-        flex-direction: column;
-        gap: 24px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        background: #fff;
-        z-index: 100;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      }
-
-
-      .nav__item {
-        .nav__link {
-          text-decoration: none;
-          font-family: var(--text-font);
-          color: var(--text-color);
-          font-size: 20px;
-          display: block;
-          padding: 12px 24px;
-          &:hover {
-            color: var(--accent-color);
-          }
-        }
-      }
-
-      .nav__item:first-child > .nav__link {
-        color: var(--title-text-color);
-        font-weight: 600;
-      }
-
-      .nav__burger {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 40px;
-        height: 32px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        z-index: 101;
-        gap: 6px;
-      }
-      .nav__burger-bar {
-        width: 100%;
-        height: 4px;
-        background: var(--title-text-color);
-        border-radius: 2px;
-        transition: 0.3s;
-      }
-
-      .nav__list.nav__list--open {
-        padding-bottom: 20px;
-        display: flex;
-      }
-
-      @media (min-width: 1024px) {
-        .nav__list {
-          display: flex;
-          flex-direction: row;
-          gap: 40px;
-          position: static;
-          width: auto;
-          background: none;
-          box-shadow: none;
-        }
-        .nav__burger {
-          display: none;
+    .nav__item {
+      .nav__link {
+        text-decoration: none;
+        font-family: var(--text-font);
+        color: var(--text-color);
+        font-size: 20px;
+        display: block;
+        padding: 12px 24px;
+        &:hover {
+          color: var(--accent-color);
         }
       }
     }
+
+    .nav__item:first-child > .nav__link {
+      color: var(--title-text-color);
+      font-weight: 600;
+    }
+
+    .nav__burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 40px;
+      height: 32px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 101;
+      gap: 6px;
+    }
+    .nav__burger-bar {
+      width: 100%;
+      height: 4px;
+      background: var(--title-text-color);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    .nav__list.nav__list--open {
+      padding-bottom: 20px;
+      display: flex;
+    }
+
+    @media (min-width: 1024px) {
+      .nav__list {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        position: static;
+        width: auto;
+        background: none;
+        box-shadow: none;
+      }
+      .nav__burger {
+        display: none;
+      }
+    }
+  }
 
   .hero {
     display: flex;
@@ -93,7 +92,6 @@
     margin-top: 60px;
     gap: 50px;
 
-
     @media (min-width: 1200px) {
       flex-direction: row;
       align-items: flex-start;
@@ -102,15 +100,13 @@
     }
 
     .promo {
-
       font-family: var(--text-font);
       text-align: center;
-    
+
       @media (min-width: 1200px) {
         text-align: left;
         margin-right: 0;
-      margin-right: 100px;
-
+        margin-right: 100px;
       }
 
       .promo__title {
@@ -123,7 +119,6 @@
         @media (min-width: 1200px) {
           margin: 0 0 20px 0;
         }
-
       }
 
       .promo__img {
@@ -136,7 +131,6 @@
         color: var(--text-color);
         line-height: 28px;
         font-weight: 300;
-        
 
         @media (min-width: 1200px) {
           width: 370px;
@@ -157,6 +151,10 @@
   }
 
   .hero__main-img {
-    max-width: 700px;
+    max-width: 100%;
+
+    @media (min-width: 1200px) {
+      max-width: 100%;
+    }
   }
 }
