@@ -9,7 +9,7 @@
   <body>
     <header class="header conteiner">
       <nav class="header__nav nav">
-        <button class="nav__burger" id="navBurger" aria-label="Open navigation" aria-expanded="false" aria-controls="navList">
+        <button class="nav__burger" id="navBurger">
           <span class="nav__burger-bar"></span>
           <span class="nav__burger-bar"></span>
           <span class="nav__burger-bar"></span>
@@ -32,10 +32,10 @@
             access information instantaneously (no tedeous form, long calls, or
             administrative hassle) and securely
           </p>
-          <button class="promo__btn btn">
+          <a class="promo__btn btn">
             Download
             <img src="assets/download.svg" alt="" />
-          </button>
+          </a>
         </div>
         <img
           class="hero__main-img"
@@ -116,7 +116,7 @@
             </article>
           </li>
         </ul>
-        <button class="latest-articles__btn btn">View all</button>
+        <a class="latest-articles__btn btn">View all</a>
       </section>
       <section class="feedback">
         <div class="feedback__card card conteiner">
@@ -186,7 +186,6 @@
   const navList = document.getElementById('navList');
   burger.addEventListener('click', function() {
     const open = navList.classList.toggle('nav__list--open');
-    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
   </body>

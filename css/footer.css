@@ -24,11 +24,12 @@
     gap: 20px;
 
     @media (min-width: 900px) {
+      width: 100%;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      margin: 0px;
-      gap: 0px
+      margin: 0 auto;
+      gap: 250px;
     }
 
     .footer__list {
