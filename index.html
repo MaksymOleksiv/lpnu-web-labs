@@ -16,9 +16,13 @@
         </button>
         <ul class="nav__list" id="navList">
           <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Find a doctor</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Find a doctor</a>
+          </li>
           <li class="nav__item"><a class="nav__link" href="#">Apps</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Testimonials</a></li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Testimonials</a>
+          </li>
           <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
         </ul>
         <img class="nav__logo" src="assets/logo.svg" alt="Logo" />
@@ -119,12 +123,16 @@
         <a class="latest-articles__btn btn">View all</a>
       </section>
       <section class="feedback">
-        <div class="feedback__card card conteiner">
+        <div class="feedback__card card conteiner" id="feedback_card">
           <h2 class="feedback__title">What our customers are saying</h2>
           <img class="feedback__icon" src="assets/white_line.svg" alt="" />
           <div class="feedback__body">
             <figure class="feedback__person">
-              <img class="feedback__avatar" src="assets/photo.png" alt="avatar" />
+              <img
+                class="feedback__avatar"
+                src="assets/photo.png"
+                alt="avatar"
+              />
               <figcaption class="feedback__person-info">
                 <span class="feedback__name">Edward Newgate</span>
                 <span class="feedback__status">Founder Circle</span>
@@ -137,56 +145,56 @@
             </blockquote>
           </div>
         </div>
-        <nav class="carousel-nav" aria-label="Feedback carousel navigation">
-          <button class="carousel-nav__arrow carousel-nav__arrow--prev" aria-label="Previous feedback">
-            <img src="assets/left_arrow.svg" alt="Previous">
+        <nav class="carousel-nav" id="feedback_carousel_nav">
+          <button class="carousel-nav__arrow carousel-nav__arrow--prev">
+            <img src="assets/left_arrow.svg" alt="Previous" id="feedback_carousel_left_img" />
           </button>
           <ul class="carousel-nav__dots">
             <li class="carousel-nav__dot-item">
-              <button class="carousel-nav__dot carousel-nav__dot--active" aria-label="Go to feedback 1">
-                <img src="assets/active_dot.svg" alt="Active dot">
+              <button class="carousel-nav__dot carousel-nav__dot--active">
+                <img src="assets/dot.svg" alt="Active dot" id="dot1"/>
               </button>
             </li>
             <li class="carousel-nav__dot-item">
-              <button class="carousel-nav__dot" aria-label="Go to feedback 2">
-                <img src="assets/dot.svg" alt="Dot">
+              <button class="carousel-nav__dot">
+                <img src="assets/dot.svg" alt="Dot" id="dot2"/>
               </button>
             </li>
             <li class="carousel-nav__dot-item">
-              <button class="carousel-nav__dot" aria-label="Go to feedback 3">
-                <img src="assets/dot.svg" alt="Dot">
+              <button class="carousel-nav__dot">
+                <img src="assets/dot.svg" alt="Dot" id="dot3"/>
               </button>
             </li>
             <li class="carousel-nav__dot-item">
-              <button class="carousel-nav__dot" aria-label="Go to feedback 4">
-                <img src="assets/dot.svg" alt="Dot">
+              <button class="carousel-nav__dot">
+                <img src="assets/dot.svg" alt="Dot" id="dot4"/>
               </button>
             </li>
           </ul>
-          <button class="carousel-nav__arrow carousel-nav__arrow--next" aria-label="Next feedback">
-            <img src="assets/right_arrow.svg" alt="Next">
+          <button class="carousel-nav__arrow carousel-nav__arrow--next">
+            <img src="assets/right_active_arrow.svg" alt="Next" id="feedback_carousel_right_img"/>
           </button>
         </nav>
       </section>
     </main>
     <footer class="footer">
-      <img class="footer_rect" src="assets/rect.svg" alt="">
+      <img class="footer_rect" src="assets/rect.svg" alt="" />
       <div class="footer__container conteiner">
-        <img class="footer__logo" src="assets/white_logo.svg" alt="Logo">
+        <img class="footer__logo" src="assets/white_logo.svg" alt="Logo" />
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link" href="#">Company</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Region</a></li>
-          <li class="footer__item"><a class="footer__link" href="#">Help</a></li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Company</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Region</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Help</a>
+          </li>
         </ul>
       </div>
     </footer>
-</main>
-<script>
-  const burger = document.getElementById('navBurger');
-  const navList = document.getElementById('navList');
-  burger.addEventListener('click', function() {
-    const open = navList.classList.toggle('nav__list--open');
-  });
-</script>
+    <script src="js/burger_nav.js"></script>
+    <script src="js/feedback_nav.js"></script>
   </body>
 </html>
