@@ -56,7 +56,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: var(--text-color-on-accent);
     font-family: var(--text-font);
 
     @media (min-width: 800px) {

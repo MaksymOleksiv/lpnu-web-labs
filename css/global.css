@@ -10,10 +10,12 @@
     rgba(103, 195, 243, 1),
     rgba(90, 152, 242, 1)
   );
+  --bg-color: #fdfdfd;
+  --text-color-on-accent: #ffffff;
 }
 
 body {
-  background-color: #fdfdfd;
+  background-color: var(--bg-color);
   overflow-x: hidden;
 }
 
@@ -25,7 +27,7 @@ body {
 
 .btn {
   font-family: var(--text-font);
-  background-color: #fff;
+  background-color: var(--bg-color);
   font-size: 20px;
   font-weight: 400;
   color: var(--accent-color);
@@ -38,6 +40,6 @@ body {
 
   &:hover {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-color-on-accent);
   }
 }
