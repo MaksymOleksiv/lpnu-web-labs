@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+    <title>Stadium CRUD</title>
+  </head>
+  <body>
+    <header class="header container">
+      <h1 class="header__title">🏟️ Stadium CRUD Application</h1>
+    </header>
+
+    <main class="container main">
+      <section class="main__form">
+        <h2 class="main__form-title">Add New Stadium</h2>
+        <form action="" class="main__form-form" id="add-stadium-form">
+          <input
+            type="text"
+            placeholder="Stadium Name"
+            class="main__form-input"
+            id="stadium-name"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Location"
+            class="main__form-input"
+            id="stadium-location"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Capacity"
+            class="main__form-input"
+            id="stadium-capacity"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Primary Sport"
+            class="main__form-input"
+            id="stadium-sport"
+            required
+          />
+          <button type="submit" class="main__form-button">Add Stadium</button>
+        </form>
+      </section>
+      <section class="main__stadium-list">
+        <nav class="main__list-nav">
+          <h2 class="main__list-title">🏟️ Stadium List</h2>
+          <div class="main__list-controls">
+            <input
+              type="text"
+              placeholder="Search Stadiums"
+              class="main__list-search"
+              id="search-input"
+            />
+            <button id="search-button" class="main__list-button main__list-button--search">
+              Search
+            </button>
+            <button id="reset-button" class="main__list-button main__list-button--reset">
+              Reset
+            </button>
+          </div>
+        </nav>
+        <ul class="main__list" id="stadiums-list">
+          <!-- Stadium items will be dynamically inserted here -->
+        </ul>
+      </section>
+    </main>
+    <section class="modalOverlay" id="modal-overlay">
+      <div class="modal" id="modal">
+        <h2 class="modal__title">Edit Stadium</h2>
+        <form action="" class="modal__form" id="edit-stadium-form">
+          <input
+            type="text"
+            placeholder="Stadium Name"
+            class="modal__form-input"
+            id="edit-stadium-name"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Location"
+            class="modal__form-input"
+            id="edit-stadium-location"
+            required
+          />
+          <input
+            type="number"
+            placeholder="Capacity"
+            class="modal__form-input"
+            id="edit-stadium-capacity"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Primary Sport"
+            class="modal__form-input"
+            id="edit-stadium-sport"
+            required
+          />
+          <div class="modal__buttons">
+            <button type="submit" class="modal__button modal__button--save">
+              Save Changes
+            </button>
+            <button
+              type="button"
+              id="close-modal"
+              class="modal__button modal__button--cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

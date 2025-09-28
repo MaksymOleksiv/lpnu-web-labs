@@ -1,0 +1,204 @@
+.main {
+  padding: 20px;
+
+  .main__form {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+
+    .main__form-title {
+      margin-top: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .main__form-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .main__form-input {
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        transition: border-color var(--transition-duration);
+
+        &:focus {
+          border-color: var(--primary-color);
+          outline: none;
+        }
+      }
+
+      .main__form-button {
+        padding: 10px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: var(--border-radius);
+        transition: background-color var(--transition-duration);
+
+        &:hover {
+          background-color: #3176d4;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .main__stadium-list {
+    margin-top: 40px;
+
+    .main__list-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: var(--border-color) 1px solid;
+
+      .main__list-controls {
+        display: flex;
+        gap: 10px;
+
+        .main__list-search {
+          padding: 8px;
+          border: 1px solid var(--border-color);
+          border-radius: var(--border-radius);
+          font-size: 1rem;
+          transition: border-color var(--transition-duration);
+
+          &:focus {
+            border-color: var(--primary-color);
+            outline: none;
+          }
+        }
+
+        .main__list-button--search {
+          background-color: var(--primary-color);
+          color: #fff;
+          border: none;
+          border-radius: var(--border-radius);
+          padding: 8px 15px;
+          transition: background-color var(--transition-duration);
+
+          &:hover {
+            background-color: #3176d4;
+            cursor: pointer;
+          }
+        }
+
+        .main__list-button--reset {
+          background-color: var(--delete-color);
+          color: #fff;
+          border: none;
+          border-radius: var(--border-radius);
+          padding: 8px 15px;
+          transition: background-color var(--transition-duration);
+
+          &:hover {
+            background-color: #b91c1c;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .main__list-title {
+      font-size: 1.6rem;
+      padding-bottom: 13px;
+    }
+
+    .main__list {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      gap: 15px;
+
+      .main__list-empty {
+        border: 4px dashed var(--border-color);
+        border-radius: var(--border-radius);
+        text-align: center;
+        padding: 20px;
+        color: var(--little-text-color);
+        font-size: 1.1rem;
+
+        .main__list-empty-text {
+          font-style: italic;
+        }
+      }
+
+      .main__list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+
+        &:hover {
+          background-color: var(--hover-bg-color);
+        }
+
+        .main__list-item-info {
+          display: flex;
+          flex-direction: column;
+
+          .main__list-item-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 0;
+
+            .main__list-item-location {
+              font-weight: normal;
+              font-size: 1rem;
+              color: var(--little-text-color);
+              margin-left: 5px;
+            }
+          }
+
+          .main__list-item-details {
+            margin: 5px 0 0 0;
+            color: #8d8d8d;
+            font-size: 0.9rem;
+          }
+        }
+
+        .main__list-item-actions {
+          display: flex;
+          gap: 10px;
+
+          .main__list-button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: var(--border-radius);
+            color: #fff;
+            transition: background-color var(--transition-duration);
+          }
+
+          .main__list-button--edit {
+            background-color: var(--edit-color);
+
+            &:hover {
+              background-color: #e05900;
+              cursor: pointer;
+            }
+          }
+          .main__list-button--delete {
+            background-color: var(--delete-color);
+
+            &:hover {
+              background-color: #b91c1c;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

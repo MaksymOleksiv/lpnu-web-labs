@@ -1,1 +1,0 @@
-# lpnu-web-labs
