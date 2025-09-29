@@ -8,6 +8,8 @@ from models import Stadium
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
+    # Initialize database tables on startup
+    await init_db()
     yield
 
 
