@@ -29,4 +29,20 @@ function searchStadiums(stadiums, query) {
     );
 }
 
-export { templateCard, templateNoData, searchStadiums };
+function filterBySport(stadiums, sport) {
+    if (!sport || sport === "all") return stadiums;
+    return stadiums.filter(stadium => stadium.primary_sport.toLowerCase() === sport.toLowerCase());
+}
+
+
+function getUniqueSports(stadiums) {
+    const sportsSet = new Set(stadiums.map(stadium => stadium.primary_sport));
+    return Array.from(sportsSet);
+}
+
+function fillOptionsForFilter(filterSportElement, stadiums) {
+    const sports = getUniqueSports(stadiums);
+    filterSportElement.innerHTML = `<option value="all">All Sports</option>` + sports.map(sport => `<option value="${sport}">${sport}</option>`).join('');
+}
+
+export { templateCard, templateNoData, searchStadiums, filterBySport, fillOptionsForFilter };

@@ -1,4 +1,10 @@
-import { templateCard, templateNoData, searchStadiums } from './utils.js';
+import {
+    templateCard,
+    templateNoData,
+    searchStadiums,
+    fillOptionsForFilter,
+    filterBySport
+} from './utils.js';
 
 const API_URL = "http://localhost:8000/";
 
@@ -26,11 +32,14 @@ const resetButton = document.getElementById("reset-button");
 const sortCapacityButton = document.getElementById("sort-capacity");
 let sortAscending = false;
 
+const filterSportSelect = document.getElementById("filter-sport");
+
 const stadiums = [];
 
-const renderStadiums = (stadiums) => {
-    sortAscending ? stadiums.sort((a, b) => a.capacity - b.capacity) : stadiums.sort((a, b) => b.capacity - a.capacity);
-    stadiumsList.innerHTML = stadiums.map(templateCard).join('');
+const renderStadiums = (stadiumsToRender) => {
+    const sortedStadiums = [...stadiumsToRender];
+    sortAscending ? sortedStadiums.sort((a, b) => a.capacity - b.capacity) : sortedStadiums.sort((a, b) => b.capacity - a.capacity);
+    stadiumsList.innerHTML = sortedStadiums.map(templateCard).join('');
 }
 
 async function fetchStadiums() {
@@ -41,6 +50,7 @@ async function fetchStadiums() {
         }
         const fetchedStadiums = await response.json();
         console.log(fetchedStadiums);
+        stadiums.length = 0;
         stadiums.push(...fetchedStadiums);
     }
     catch (error) {
@@ -240,4 +250,13 @@ sortCapacityButton.addEventListener("click", () => {
 });
 
 
-fetchStadiums();
+filterSportSelect.addEventListener("change", () => {
+    const selectedSport = filterSportSelect.value;
+    const filteredStadiums = filterBySport(stadiums, selectedSport);
+    renderStadiums(filteredStadiums);
+});
+
+
+fetchStadiums().then(() => {
+    fillOptionsForFilter(filterSportSelect, stadiums);
+});
