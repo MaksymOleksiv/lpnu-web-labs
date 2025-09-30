@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS stadiums (
     name VARCHAR(255) NOT NULL,
     country VARCHAR(255) NOT NULL,
     capacity INTEGER NOT NULL,
-    primary_sport VARCHAR(255) NOT NULL,
+    primary_sport VARCHAR(255) NOT NULL
 );
 
 -- Insert some sample data

@@ -60,6 +60,20 @@
         display: flex;
         gap: 10px;
 
+        .sort-button {
+          background-color: var(--primary-color);
+          color: #fff;
+          border: none;
+          border-radius: var(--border-radius);
+          padding: 8px 15px;
+          transition: background-color var(--transition-duration);
+
+          &:hover {
+            background-color: #3176d4;
+            cursor: pointer;
+          }
+        }
+
         .main__list-search {
           padding: 8px;
           border: 1px solid var(--border-color);
@@ -169,13 +183,6 @@
           display: flex;
           gap: 10px;
 
-          .main__list-button {
-            padding: 8px 15px;
-            border: none;
-            border-radius: var(--border-radius);
-            color: #fff;
-            transition: background-color var(--transition-duration);
-          }
 
           .main__list-button--edit {
             background-color: var(--edit-color);

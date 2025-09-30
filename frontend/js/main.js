@@ -23,9 +23,13 @@ const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-button");
 const resetButton = document.getElementById("reset-button");
 
+const sortCapacityButton = document.getElementById("sort-capacity");
+let sortAscending = false;
+
 const stadiums = [];
 
 const renderStadiums = (stadiums) => {
+    sortAscending ? stadiums.sort((a, b) => a.capacity - b.capacity) : stadiums.sort((a, b) => b.capacity - a.capacity);
     stadiumsList.innerHTML = stadiums.map(templateCard).join('');
 }
 
@@ -225,6 +229,13 @@ searchButton.addEventListener("click", () => {
 
 resetButton.addEventListener("click", () => {
     searchInput.value = "";
+    renderStadiums(stadiums);
+});
+
+
+sortCapacityButton.addEventListener("click", () => {
+    sortAscending = !sortAscending;
+    sortCapacityButton.textContent = sortAscending ? "Capacity ↓" : "Capacity ↑";
     renderStadiums(stadiums);
 });
 
