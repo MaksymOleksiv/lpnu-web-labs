@@ -60,6 +60,20 @@
         display: flex;
         gap: 10px;
 
+        .main__count-button {
+          background-color: var(--primary-color);
+          color: #fff;
+          border: none;
+          border-radius: var(--border-radius);
+          padding: 8px 15px;
+          transition: background-color var(--transition-duration);
+
+          &:hover {
+            background-color: #3176d4;
+            cursor: pointer;
+          }
+        }
+
         .sort-button {
           background-color: var(--primary-color);
           color: #fff;

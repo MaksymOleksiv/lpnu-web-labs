@@ -34,6 +34,8 @@ let sortAscending = false;
 
 const filterSportSelect = document.getElementById("filter-sport");
 
+const countCapacitiesButton = document.getElementById("count-capacities");
+
 const stadiums = [];
 
 const renderStadiums = (stadiumsToRender) => {
@@ -256,6 +258,10 @@ filterSportSelect.addEventListener("change", () => {
     renderStadiums(filteredStadiums);
 });
 
+countCapacitiesButton.addEventListener("click", () => {
+    const totalCapacity = stadiums.reduce((sum, stadium) => sum + stadium.capacity, 0);
+    alert(`Total Capacity of All Stadiums: ${totalCapacity}`);
+});
 
 fetchStadiums().then(() => {
     fillOptionsForFilter(filterSportSelect, stadiums);
