@@ -155,3 +155,13 @@ docker-compose down -v && docker-compose up database
 ## 📝 License
 
 This project is for educational purposes.
+
+## Env
+
+```
+DB_USER=user
+DB_PASSWORD=password
+DB_HOST=localhost
+DB_NAME=dbname
+DB_PORT=5432
+```
