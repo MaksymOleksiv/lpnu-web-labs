@@ -1,0 +1,16 @@
+import React from "react";
+import style from "./Hero.module.css";
+
+const Hero = () => {
+    return (
+        <section className={style.hero}>
+            <div className={style.content}>
+                <h2 className={style.title}>Find Your Perfect Laptop</h2>
+                <p className={style.subtitle}>Discover the best laptops for your needs.</p>
+                <button className={style.button}>Move to Catalog <span>→</span></button>
+            </div>
+        </section>);
+};
+
+export default Hero;
+

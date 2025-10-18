@@ -1,0 +1,80 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 0 20px;
+    padding: 15px 10px;
+    background-color: #1c263435;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.title {
+    color: var(--primary-color);
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    font-size: 23px;
+    
+    li {
+        cursor: pointer;
+        transition: color 0.3s;
+        &:hover {
+            color: var(--primary-color);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+.userActions {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    button {
+        background-color: var(--primary-color);
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: #25b3ad;
+        }
+    }
+
+    .loginButton {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    &:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+}
+}
+
