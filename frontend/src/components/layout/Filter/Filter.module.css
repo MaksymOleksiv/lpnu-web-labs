@@ -1,0 +1,73 @@
+.filter {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #243041;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 33px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.priceRange {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    span {
+        font-size: 18px;
+    }
+}
+
+.label {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 7px;
+}
+
+.select {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #404b5b;
+    background-color: #1f2a38;
+    color: gray;
+}
+
+
+.inputPrice {
+    width: 48%;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #404b5b;
+    background-color: #1f2a38;
+    color: gray;
+}
+
+.button {
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-weight: 500;
+
+    &:hover {
+        background-color: var(--secondary-color);
+    }
+}

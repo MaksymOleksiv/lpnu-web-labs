@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "./TopModels.module.css";
 import Item from "../../common/Item/Item";
 
@@ -11,7 +12,7 @@ const TopModels = () => {
                 <Item item={{ photo: "", name: "Laptop 2", description: "Lightweight and portable", price: "$799" }} />
                 <Item item={{ photo: "", name: "Laptop 3", description: "Best for gaming", price: "$1299" }} />
             </div>
-            <button className={style.button}>View More</button>
+            <Link to="/catalog" className={style.button}>View More</Link>
         </section>
     );
 };

@@ -7,9 +7,10 @@
 :root {
   --primary-color: #2dd4bf;
   --secondary-color: #25b3ad;
-  --secondary-background-color: #161d28;
-  --background-color: #1c2634;
+  --secondary-background-color: #232a36;
+  --background-color: #192230;
   --text-color: #ffffff;
+  --secondary-text-color: #2c3d53;
   --header-height: 60px;
 }
 

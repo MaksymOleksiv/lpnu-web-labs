@@ -1,0 +1,29 @@
+.catalogPage {
+    background-color: #111827;
+}
+
+.catalog {
+    margin-top: 63px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-size: 36px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.itemList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    margin-top : 20px;
+
+}
+

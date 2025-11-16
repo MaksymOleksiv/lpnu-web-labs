@@ -25,7 +25,10 @@
 }
 
 .title {
-    color: var(--primary-color);
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+    }
 }
 
 .navLinks {

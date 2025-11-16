@@ -1,16 +1,15 @@
 import './App.css';
-import Header from './components/layout/Header/Header';
-import Hero from './components/layout/Hero/Hero';
-import TopModels from './components/layout/TopModels/TopModels';
-import Footer from './components/layout/Footer/Footer';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/pages/Home/Home';
+import Catalog from './components/pages/Catalog/Catalog';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <TopModels />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<Catalog />} />
+      </Routes>
     </div>
   );
 }
