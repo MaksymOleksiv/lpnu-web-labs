@@ -1,0 +1,14 @@
+.itemPage {
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+    margin-top: 60px; /* Header height */
+    display: flex;
+    justify-content: center;
+}

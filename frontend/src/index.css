@@ -5,12 +5,25 @@
 }
 
 :root {
+  /* Основні кольори */
   --primary-color: #2dd4bf;
   --secondary-color: #25b3ad;
-  --secondary-background-color: #232a36;
+  
+  /* Кольори фонів */
   --background-color: #192230;
+  --secondary-background-color: #232a36;
+  --dark-background: #111827;
+  --filter-background: #243041;
+  --input-background: #1f2a38;
+  --header-background: #1c263435;
+  
+  /* Кольори тексту */
   --text-color: #ffffff;
   --secondary-text-color: #2c3d53;
+  --gray-text-color: #b8b8b8;
+  
+  /* Кольори бордерів та інші */
+  --border-color: #404b5b;
   --header-height: 60px;
 }
 

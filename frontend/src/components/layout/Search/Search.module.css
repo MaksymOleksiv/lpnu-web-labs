@@ -9,6 +9,6 @@
     margin-top: 20px;
     font-size: 16px;
     border-radius: 4px;
-    border: 2px solid #404b5b;
-    background-color: #1f2a38;
+    border: 2px solid var(--border-color);
+    background-color: var(--input-background);
 }

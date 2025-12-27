@@ -33,7 +33,7 @@
 
 .description {
     font-size: 20px;
-    color: #b8b8b8;
+    color: var(--gray-text-color);
     margin-bottom: 12px;
 }
 

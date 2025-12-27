@@ -2,7 +2,7 @@
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
-    background-color: #243041;
+    background-color: var(--filter-background);
     color: var(--text-color);
     display: flex;
     flex-direction: column;
@@ -38,8 +38,8 @@
     font-size: 20px;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #404b5b;
-    background-color: #1f2a38;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background);
     color: gray;
 }
 
@@ -49,8 +49,8 @@
     font-size: 20px;
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #404b5b;
-    background-color: #1f2a38;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background);
     color: gray;
 }
 

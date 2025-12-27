@@ -1,21 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "./Item.module.css";
 import placeholderImage from "../../../assets/img/Default.png";
+import { formatPrice } from "../../../utils/priceFormatter";
 
 const Item = ({ item }) => {
-    let { photo, name, description, price } = item;
-
-    if (photo === "") {
-        photo = placeholderImage;
-    }
+    const { id, brand, model, price, cpu, ram, storage, imageUrl } = item;
+    
+    const displayImage = imageUrl || placeholderImage;
+    const displayName = `${brand.name} ${model}`;
+    const displayDescription = `${cpu} | ${ram}GB RAM | ${storage}GB Storage`;
 
     return (
         <div className={style.item}>
-            <img src={photo} alt={name} className={style.photo} />
-            <h3 className={style.name}>{name}</h3>
-            <p className={style.description}>{description}</p>
-            <span className={style.price}>{price}</span>
-            <button className={style.button}>Add to Cart</button>
+            <img src={displayImage} alt={displayName} className={style.photo} />
+            <h3 className={style.name}>{displayName}</h3>
+            <p className={style.description}>{displayDescription}</p>
+            <span className={style.price}>{formatPrice(price)}</span>
+            <Link to={`/item/${id}`} className={style.linkButton}>
+                <button className={style.button}>View Details</button>
+            </Link>
         </div>
     );
 }
